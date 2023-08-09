@@ -1,6 +1,9 @@
 # Allow vendor/extra to override any property by setting it first
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 
+# Audio
+$(call inherit-product, vendor/aosp/audio/audio.mk)
+
 # Google - GMS and Pixel vendor
 $(call inherit-product, vendor/google/gms/config.mk)
 $(call inherit-product, vendor/google/pixel/config.mk)
@@ -190,6 +193,12 @@ PRODUCT_PACKAGES += \
     su
 endif
 endif
+
+# Sounds (default)
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.config.ringtone=vibe.ogg \
+    ro.config.notification_sound=no-pro.ogg \
+    ro.config.alarm_alert=frenzy.ogg
 
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
