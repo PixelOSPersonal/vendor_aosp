@@ -260,3 +260,6 @@ $(call inherit-product, vendor/aosp/config/ota.mk)
 $(call inherit-product, vendor/pixel-framework/config.mk)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
+
+-include vendor/auroraui/config/common.mk
+
