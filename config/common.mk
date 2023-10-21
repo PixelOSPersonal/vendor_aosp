@@ -8,7 +8,7 @@ $(call inherit-product, vendor/aosp/audio/audio.mk)
 $(call inherit-product, vendor/google/gms/config.mk)
 $(call inherit-product, vendor/google/pixel/config.mk)
 
-PRODUCT_BRAND ?= PixelOS
+PRODUCT_BRAND ?= Aurora
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 

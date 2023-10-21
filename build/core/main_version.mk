@@ -4,7 +4,7 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 endif
 
-# PixelOS Platform Version
+# Aurora Platform Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.custom.build.date=$(BUILD_DATE) \
     ro.custom.device=$(CUSTOM_BUILD) \
@@ -15,6 +15,6 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
 # Updater
 ifeq ($(IS_OFFICIAL),true)
     ADDITIONAL_SYSTEM_PROPERTIES  += \
-        net.pixelos.build_type=ci \
-        net.pixelos.version=$(CUSTOM_VERSION_PROP)
+        net.aurora.build_type=ci \
+        net.aurora.version=$(CUSTOM_VERSION_PROP)
 endif
